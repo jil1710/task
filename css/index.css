@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Nunito+Sans:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Courgette&family=Nunito+Sans:wght@300&family=Roboto&display=swap');
+:root{
+    --main-bg:#212F3C;
+  }
+  
+  .main-bg {
+    background: var(--main-bg) !important;
+  }
+  
+  input:focus, button:focus {
+    border: 1px solid var(--main-bg) !important;
+    box-shadow: none !important;
+  }
+  
+  .form-check-input:checked {
+    background-color: var(--main-bg) !important;
+    border-color: var(--main-bg) !important;
+  }
+  
+  .card, .btn, input{
+    border-radius:0 !important;
+  }
+  .main-content {
+    display: flex;
+}
+
+.head {
+    font-family: 'Courgette', cursive;
+}

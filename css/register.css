@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Nunito+Sans:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Courgette&family=Nunito+Sans:wght@300&family=Roboto&display=swap');
+
+:root {
+    --main-bg: #212F3C;
+}
+
+.main-bg {
+    background: var(--main-bg) !important;
+}
+
+input:focus,
+button:focus {
+    border: 1px solid var(--main-bg) !important;
+    box-shadow: none !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--main-bg) !important;
+    border-color: var(--main-bg) !important;
+}
+
+.card,
+.btn,
+input {
+    border-radius: 0 !important;
+}
+
+.main-content {
+    display: flex;
+}
+
+.head {
+    font-family: 'Courgette', cursive;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #34495E;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1B2631;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0b0f13;
+}
+
+
+@media (max-width:925px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .card{
+        width: 24rem;
+    }
+}
+@media (max-width:500px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .card{
+        width: 17rem;
+    }
+}

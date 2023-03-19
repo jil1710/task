@@ -1,0 +1,140 @@
+<script>
+    if (localStorage.getItem("session") === null) {
+        location.href = '../'
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Font Awesome CDN link for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Typing animation dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+        integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/home.css" />
+</head>
+
+<body>
+    <main>
+        <div class="big-wrapper dark">
+            <img src="../images/shape.png" alt="" class="shape" />
+
+            <header>
+                <div class="__container">
+                    <div class="logo">
+                        <img src="../images/logo.png" style="margin-right: 20px;" alt="Logo" />
+                        <h3>My Portfolio</h3>
+                    </div>
+
+                    <div class="links">
+                        <ul class="m-0">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#ModalForm"
+                                    id="update">Setting</a></li>
+                            <li><a href="#" class="btn" id="logout"><i style="line-height: 25px;"
+                                        class="fa fa-right-from-bracket"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="overlay"></div>
+
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="showcase-area">
+                <div class="__container">
+                    <div class="left">
+                        <div class="big-title">
+                            <h1>Welcome <span id="username"></span></h1>
+                            <h1>Start Exploring now.</h1>
+                        </div>
+                        <p class="text">
+                        <div style="display: flex;">
+                            <div class="iam">I'm</div>
+                            <div class="type"></div>
+                        </div>
+                        </p>
+                        <div class="cta">
+                            <div>
+                                <img style="width: 80px;height: 80px;border-radius: 50%;" src="" id="profile-pic"
+                                    alt="">
+                                <a id="contact" class="btn">Contact me</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <img src="../images/person.png" alt="Person Image" class="person" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-area">
+                <div class="__container">
+                    <button class="toggle-btn">
+                        <i class="fa fa-moon"></i>
+                        <i class="fa fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- modal start -->
+        <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                        <div class="myform">
+                            <input type="file" id="pic" hidden>
+                            <label for="pic" class="text-center" style="padding: 8px;width: 100%;"><img id="load-img"
+                                    style="position: relative;width: 100px; height: 100px;border-radius: 50%;"
+                                    src="../images/logo.png" id="choose" alt=""><span
+                                    style="border-radius: 8px;padding: 10px;background-color: rgb(28, 29, 39);position: absolute;font-size: 14px;cursor: pointer;top: 110px;right: 130px;"><i
+                                        class="fa fa-upload"></i></span></label>
+                            <form>
+                                <div class="mb-3 mt-4">
+                                    <label for="uemail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="uemail" readonly disabled
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="upass" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="upass">
+                                </div>
+                                <button class="btn btn-light mt-3 w-100" id="setdata">Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- SWEETALERT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/home.js"></script>
+</body>
+
+</html>
