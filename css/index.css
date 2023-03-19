@@ -28,3 +28,20 @@
 .head {
     font-family: 'Courgette', cursive;
 }
+
+@media (max-width:925px) {
+  .main-content {
+      flex-direction: column;
+  }
+  .card{
+      width: 24rem;
+  }
+}
+@media (max-width:500px) {
+  .main-content {
+      flex-direction: column;
+  }
+  .card{
+      width: 17rem;
+  }
+}
